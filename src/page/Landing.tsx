@@ -35,7 +35,7 @@ const Landing = () => {
 
         <div className="m-second ">
           <h1 className="text-6xl font-bold leading-19 ">
-            A simpler way to show your GitHub profile and repositories.
+            A simpler way to review your GitHub profile and repositories.
           </h1>
         </div>
 
