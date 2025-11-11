@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import './styles/profile.css'
-import Markdown from 'https://esm.sh/react-markdown@10'
+import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
