@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+@font-face {
+    font-family: main;
+    src: url('./font/ssh.ttf');
+}
+@theme{
+    --font-main: main, 'sans-serif';
+}
+
+
+@layer keyframes {
+  @keyframes moveAndRotate {
+    0% {
+      right: 100px;
+      transform: rotate(0deg);
+        filter: drop-shadow(0 0 2px #63e);
+    }
+    50% {
+      right: 300px;
+      transform: rotate(-8deg);
+      filter: drop-shadow(0 0 9px #63e);
+    }
+    100% {
+      right: 100px;
+      transform: rotate(0deg);
+       filter: drop-shadow(0 0 2px #63e);
+    }
+  }
+}
+
+@layer utilities {
+  .animate-moveAndRotate {
+    animation: moveAndRotate 8s infinite ease-in-out;
+  }
+}
