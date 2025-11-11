@@ -1,73 +1,156 @@
-# React + TypeScript + Vite
+Got it — here is a **pure Markdown README.md**, no explanation, no extra text — ready to paste directly into your repo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+```md
+# GitHub Reviewer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+GitHub Reviewer is a web application built with **React + TypeScript** that analyzes any GitHub profile and generates an **AI-powered review** based on repositories, languages, stars, activity, and more.
 
-## React Compiler
+Live Website: https://github-reviewer-pi.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Search any GitHub username.
+- Fetches:
+  - Avatar, bio, followers/following
+  - Public repositories
+  - Stargazers, forks, watchers
+  - Languages and technologies used
+  - Last updated repo activity
+- AI-generated profile review.
+- Clean, responsive UI.
+- Fast deployment using Vercel.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧠 How It Works
+
+1. User enters a GitHub username.  
+2. Application fetches user + repo data from GitHub REST API.  
+3. Data is structured and sent to the AI model.  
+4. AI generates:
+   - Skill summary  
+   - Strengths  
+   - Weaknesses  
+   - Repo quality insights  
+5. Review is displayed on the UI.
+
+---
+
+## 🚀 Tech Stack
+
+**Frontend:** React, TypeScript, Vite, Tailwind CSS  
+**APIs:** GitHub REST API, AI (Gemini/GPT)  
+**Deployment:** Vercel  
+
+
+
+## 📁 Folder Structure
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+github-reviewer/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── utils/
+│   ├── types/
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠 Installation
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/lakshya-sinha/github-reviewer
+cd github-reviewer
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
 ```
+
+### 3. Environment Variables
+
+Create a `.env` file:
+
+```
+VITE_GITHUB_TOKEN=your_github_token_here
+VITE_AI_API_KEY=your_ai_key_here
+```
+
+> GitHub token optional but recommended to avoid rate-limits.
+
+### 4. Run Development Server
+
+```bash
+npm run dev
+```
+
+App will run on:
+[http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🌐 Deployment
+
+Deploy on Vercel:
+
+```bash
+vercel
+```
+
+or connect repo directly to Vercel dashboard.
+
+
+## 📸 Screenshots
+
+*Add images here*
+
+```
+![Homepage](./screenshots/home.png)
+![Profile Page](./screenshots/profile.png)
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Charts for languages & activity
+* Caching & rate-limit protection
+* Compare two GitHub profiles
+* Dark/light theme toggle
+* More AI analysis options
+* Contributions graph integration
+* Repo README analysis
+
+
+
+## 📄 License
+
+Licensed under the **MIT License**.
+
+
+
+## 💬 Author
+
+**Lakshya Sinha**
+GitHub: [https://github.com/lakshya-sinha](https://github.com/lakshya-sinha)
+
+
