@@ -52,7 +52,7 @@ interface data {
 
 const Profile: React.FC = () => {
 
-    const ai = new GoogleGenerativeAI(import.meta.env.GEMINI_SECRET);
+    const ai = new GoogleGenerativeAI(`${import.meta.env.GEMINI_SECRET}`);
  
 
     const [data, setData] = useState<data>()
